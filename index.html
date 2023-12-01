@@ -402,22 +402,23 @@
         window.addEventListener("load", function () {
             document.getElementById("loadingPage").style.display = "none";
             document.getElementsByTagName("body")[0].style.overflow = "auto";
+            function typeWriter(text, i, speed, elementId) {
+                if (i < text.length) {
+                    document.getElementById(elementId).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(function () {
+                        typeWriter(text, i, speed, elementId);
+                    }, speed);
+                }
+            }
+            const textToType = "Software Developer";
+            const speed = 100; // Adjust the speed of typing (in milliseconds)
+            typeWriter(textToType, 0, speed, 'typing-effect');
         });
 
         AOS.init();
 
-        function typeWriter(text, i, speed, elementId) {
-            if (i < text.length) {
-                document.getElementById(elementId).innerHTML += text.charAt(i);
-                i++;
-                setTimeout(function () {
-                    typeWriter(text, i, speed, elementId);
-                }, speed);
-            }
-        }
-        const textToType = "Software Developer";
-        const speed = 100; // Adjust the speed of typing (in milliseconds)
-        typeWriter(textToType, 0, speed, 'typing-effect');
+
 
 
 
