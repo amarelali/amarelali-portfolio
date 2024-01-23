@@ -23,9 +23,11 @@
         transition-duration: 0.1s;
     }
 }
-body{
+
+body {
     overflow: hidden;
 }
+
 .nav-item a {
     position: relative
 }
@@ -251,18 +253,36 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  #loadingPage i {
+}
+
+#loadingPage i {
     color: #9f697f;
     font-size: 70px;
-  }
+}
 
-  @keyframes beat-fade {
-    0% { transform: scale(1); opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { transform: scale(1.2); opacity: 0; }
-  }
-  
-  .fa-beat-fade {
+@keyframes beat-fade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.fa-beat-fade {
     animation: beat-fade 1s ease-in-out infinite;
-  }
+}
+
+.notes {
+    background-color: #ffee93;
+    color: #d1266a;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
